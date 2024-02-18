@@ -60,7 +60,7 @@
                 pyright.enable = true;
                 shellcheck.enable = true;
                 markdownlint.enable = true;
-                nixfmt.enable = true;
+                alejandra.enable = true;
                 editorconfig-checker.enable = true;
               };
 
