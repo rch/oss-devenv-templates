@@ -45,10 +45,6 @@
 
             scripts.hello.exec = "echo $GREET";
 
-            enterShell = ''
-              hello
-            '';
-
             languages.python = {
               package = pkgs.python311;
               enable = true;
