@@ -39,6 +39,7 @@
               python311Packages.pip
               ruff
               nodePackages.pyright
+              just
             ];
 
             env = {GREET = "󱄅 Nix";};
