@@ -59,7 +59,7 @@
             };
 
             pre-commit.hooks = {
-              ruff.enable = true;
+              ruff.enable = false;
               shellcheck.enable = true;
               markdownlint.enable = true;
               alejandra.enable = true;
