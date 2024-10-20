@@ -36,9 +36,9 @@
               stdenv.cc.cc.lib # required by Jupyter
               zlib
               glibc
-              python311Packages.pip
+              python312Packages.pip
               ruff
-              nodePackages.pyright
+              pyright
               just
             ];
 
@@ -47,7 +47,7 @@
             scripts.hello.exec = "echo $GREET";
 
             languages.python = {
-              package = pkgs.python311;
+              package = pkgs.python312;
               enable = true;
               poetry = {
                 enable = true;
