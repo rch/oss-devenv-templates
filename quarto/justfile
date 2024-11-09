@@ -4,6 +4,7 @@ default:
 dir-name := `basename $(pwd)`
 
 alias u := update
+alias ad := add-deps
 alias c := create
 alias ck := create-kernel
 alias r := render
@@ -11,6 +12,10 @@ alias p := preview
 
 update:
     poetry update
+
+add-deps:
+    poetry add --group dev jupyter
+    poetry add numpy pandas matplotlib seaborn
 
 create:
     quarto create project book notes
