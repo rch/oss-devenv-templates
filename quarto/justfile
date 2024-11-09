@@ -1,0 +1,26 @@
+default:
+    @just --list --unsorted
+
+dir-name := `basename $(pwd)`
+
+alias u := update
+alias c := create
+alias ck := create-kernel
+alias r := render
+alias p := preview
+
+update:
+    poetry update
+
+create:
+    quarto create project book notes
+
+create-kernel:
+    python -m ipykernel install --user --name {{dir-name}}
+    echo -e "\njupyter: {{dir-name}}" >> notes/_quarto.yml
+
+render:
+    quarto render notes
+
+preview:
+    quarto preview notes
