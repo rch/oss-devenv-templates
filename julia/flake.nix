@@ -48,6 +48,7 @@
 
             languages.julia = {
               enable = true;
+              package = pkgs.julia-lts;
             };
 
             pre-commit.hooks = {
