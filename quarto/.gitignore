@@ -178,3 +178,8 @@ pyrightconfig.json
 # devenv specific
 .devenv/
 .direnv/
+.stfolder/
+
+notes/.quarto/*
+notes/_site/*
+notes/_freeze/*
