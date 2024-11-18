@@ -18,7 +18,7 @@ add-deps:
     poetry add numpy pandas matplotlib seaborn
 
 create:
-    quarto create project book notes
+    quarto create project website notes
 
 create-kernel:
     python -m ipykernel install --user --name {{dir-name}}
