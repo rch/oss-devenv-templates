@@ -1,0 +1,47 @@
+project:
+  type: website
+
+website:
+  title: "<...> notes"
+  bread-crumbs: false
+  page-footer:
+    left: "Copyright 2024, Dileep Kishore"
+    right:
+      - icon: github
+        href: https://github.com/dileep-kishore/
+  back-to-top-navigation: true
+  navbar:
+    background: primary
+    search: false
+    left:
+      - src/index.qmd
+  sidebar:
+    type: "dark"
+    style: "docked"
+    border: true
+    search: true
+    contents:
+      - src/index.qmd
+      - src/references.qmd
+      - auto: "src/docs/**/*"
+
+bibliography: src/references.bib
+execute:
+  freeze: auto
+
+format:
+  html:
+    code-fold: true
+    title-block-banner: true
+    reference-location: margin
+    citation-location: margin
+    toc: true
+    grid:
+      body-width: 2000px
+      sidebar-width: 300px
+      margin-width: 300px
+    theme:
+      dark: _css/mocha.scss
+      light: journal
+
+jupyter: <...>-notes

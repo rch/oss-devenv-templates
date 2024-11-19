@@ -1,0 +1,13 @@
+---
+listing:
+    id: home-listings
+    contents: docs
+    type: table
+    sort: "date"
+---
+# Home {.unnumbered}
+
+These are my notes for the <...> project
+
+::: {#home-listings}
+:::
