@@ -5,7 +5,6 @@ dir-name := `basename $(pwd)`
 
 alias u := update
 alias ad := add-deps
-alias c := create
 alias ck := create-kernel
 alias ak := add-kernel
 alias r := render
@@ -18,9 +17,6 @@ add-deps:
     poetry add --group dev jupyter
     poetry add numpy pandas matplotlib seaborn
 
-create:
-    quarto create project website notes
-
 create-kernel:
     python -m ipykernel install --user --name {{dir-name}}
 
@@ -28,7 +24,7 @@ add-kernel:
     echo -e "\njupyter: {{dir-name}}" >> notes/_quarto.yml
 
 render:
-    quarto render notes
+    quarto render
 
 preview:
-    quarto preview notes
+    quarto preview
