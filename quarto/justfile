@@ -7,6 +7,7 @@ alias u := update
 alias ad := add-deps
 alias c := create
 alias ck := create-kernel
+alias ak := add-kernel
 alias r := render
 alias p := preview
 
@@ -22,6 +23,8 @@ create:
 
 create-kernel:
     python -m ipykernel install --user --name {{dir-name}}
+
+add-kernel:
     echo -e "\njupyter: {{dir-name}}" >> notes/_quarto.yml
 
 render:
