@@ -1,5 +1,6 @@
 project:
   type: website
+  execute-dir: project
 
 website:
   title: "<...> notes"
@@ -32,6 +33,8 @@ execute:
 format:
   html:
     code-fold: true
+    highlight-style: github
+    code-line-numbers: true
     title-block-banner: true
     reference-location: margin
     citation-location: margin
