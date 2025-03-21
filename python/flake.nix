@@ -33,12 +33,7 @@
         modules = [
           {
             packages = with pkgs; [
-              stdenv.cc.cc.lib # required by Jupyter
-              zlib
-              glibc
-              python312Packages.pip
               ruff
-              pyright
               just
             ];
 
@@ -49,20 +44,16 @@
             languages.python = {
               package = pkgs.python312;
               enable = true;
-              poetry = {
-                enable = true;
-                activate.enable = true;
-                install.enable = true;
-                install.installRootPackage = true;
-                install.allExtras = true;
-              };
+              uv.enable = true;
+              uv.sync.enable = true;
+              uv.sync.allExtras = true;
+              venv.enable = true;
             };
 
             pre-commit.hooks = {
               ruff.enable = false;
               shellcheck.enable = true;
               markdownlint.enable = true;
-              alejandra.enable = true;
               editorconfig-checker.enable = true;
             };
 
