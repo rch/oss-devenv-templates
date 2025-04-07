@@ -33,7 +33,11 @@
         modules = [
           {
             packages = with pkgs; [
+              stdenv.cc.cc.lib # required by Jupyter
+              zlib
+              python312Packages.pip
               ruff
+              pyright
               just
             ];
 
