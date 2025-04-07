@@ -23,8 +23,12 @@ create-kernel:
 add-kernel:
     echo -e "\njupyter: {{dir-name}}" >> notes/_quarto.yml
 
-render:
+cd-src:
+    cd "$(git rev-parse --show-toplevel || echo .)"
+    cd src/
+
+render: cd-src
     quarto render
 
-preview:
+preview: cd-src
     quarto preview
