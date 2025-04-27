@@ -33,12 +33,8 @@
         modules = [
           {
             packages = with pkgs; [
-              stdenv.cc.cc.lib # required by Jupyter
               zlib
-              glibc
-              python312Packages.pip
               ruff
-              pyright
               just
             ];
 
@@ -47,15 +43,14 @@
             scripts.hello.exec = "echo $GREET";
 
             languages.python = {
-              package = pkgs.python312;
+              package = pkgs.python313;
               enable = true;
-              poetry = {
+              uv = {
                 enable = true;
-                activate.enable = true;
-                install.enable = true;
-                install.installRootPackage = true;
-                install.allExtras = true;
+                sync.enable = true;
+                sync.allExtras = true;
               };
+              venv = {enable = true;};
             };
 
             pre-commit.hooks = {
@@ -70,7 +65,6 @@
 
             env.LD_LIBRARY_PATH = with pkgs;
               lib.makeLibraryPath [
-                stdenv.cc.cc.lib
                 zlib
               ];
           }

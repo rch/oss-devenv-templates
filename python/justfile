@@ -1,2 +1,2 @@
 update:
-    poetry update
+    uv lock --upgrade
