@@ -52,7 +52,7 @@
 
             languages.java = {
               enable = true;
-              java.gradle.enable = true;
+              gradle.enable = true;
               jdk.package = pkgs.jdk11;
             };
             
