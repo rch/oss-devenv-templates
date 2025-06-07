@@ -6,6 +6,10 @@
     nixpkgs,
   }: {
     templates = {
+      default = {
+        path = ./default;
+        description = "Default development environment";
+      };
       python = {
         path = ./python;
         description = "Python development environment";
