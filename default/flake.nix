@@ -48,6 +48,7 @@
             languages.javascript = {
               enable = true;
               yarn.enable = true;
+              pnpm.enable = true;
             };
 
             languages.java = {
